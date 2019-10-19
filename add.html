@@ -1,0 +1,37 @@
+<html>
+  <head>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script language="javascript">
+                function addNumbers()
+                {
+                        var val1 = parseInt(document.getElementById("value1").value);
+                        var val2 = parseInt(document.getElementById("value2").value);
+                        var ansD = document.getElementById("answer");
+                        ansD.value = val1 + val2;
+                }
+                $(document).ready(function(){
+                $("#simulator").click(function(){
+                  $("#sim").animate({height: '250px'});
+                });
+              });
+        </script>
+  </head>
+  <body>
+    <div class="row">
+        <div class="col-md-6" style="border: 1px black solid;padding: 3%;background-color:#c8e8ea;">
+          value1 = <input type="text" id="value1" name="value1" /><br>
+          value2 = <input type="text" id="value2" name="value2" /><br>
+          <input id="simulator" type="button" name="Sumbit" value="Click here" onclick="addNumbers()"/><br>
+        </div>
+        <div class="col-md-6" style="border: 1px black solid;padding: 3%;background-color:#c8e8ea;">
+          Answer = <input type="text" id="answer" name="answer" value=""/>
+        </div>
+    </div> 
+    <div class="row">
+        <div class="col-md-6" style="border: 1px black solid;padding: 3%;background-color:#c8e8ea;">
+          <div id="sim" style="background-color: red;height: 100px; width: 200px;"></div>
+        </div>
+    </div> 
+  </body>
+</html>
